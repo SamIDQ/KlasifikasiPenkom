@@ -55,10 +55,19 @@ st.markdown("""
 
 st.title("\U0001F4F1 Analisis Sentimen Review Aplikasi Gojek")
 
+# # Load dataset
+# file_path = Path(r"db\GojekReviewer_final.csv")
+# if not file_path.exists():
+#     st.error(f"\u274c File tidak ditemukan di path: {file_path}")
+#     st.stop()
+
+# df = pd.read_csv(file_path)
+# df['sentimen'] = df['score'].apply(label_sentiment)
+
 # Load dataset
-file_path = Path(r"db\GojekReviewer_final.csv")
+file_path = Path("db") / "GojekReviewer_final.csv"
 if not file_path.exists():
-    st.error(f"\u274c File tidak ditemukan di path: {file_path}")
+    st.error(f"❌ File tidak ditemukan di path: {file_path.resolve()}")
     st.stop()
 
 df = pd.read_csv(file_path)
