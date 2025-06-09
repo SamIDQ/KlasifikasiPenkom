@@ -4,5 +4,6 @@ numpy
 scikit-learn
 matplotlib
 seaborn
-gensim
+scipy==1.11.4
+gensim==4.3.2
 tensorflow
